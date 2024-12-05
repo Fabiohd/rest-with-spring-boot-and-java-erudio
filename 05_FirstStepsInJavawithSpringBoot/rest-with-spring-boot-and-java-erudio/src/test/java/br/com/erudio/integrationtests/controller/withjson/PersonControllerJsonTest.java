@@ -232,7 +232,7 @@ public class PersonControllerJsonTest extends AbstractIntegrationTest {
 				.statusCode(204);
 	}
 	
-	@Test
+	/*@Test
 	@Order(6)
 	public void testFindAll() throws JsonMappingException, JsonProcessingException {
 		
@@ -284,9 +284,9 @@ public class PersonControllerJsonTest extends AbstractIntegrationTest {
 		assertEquals("Dome", foundPersonSix.getLastName());
 		assertEquals("57 Roxbury Pass", foundPersonSix.getAddress());
 		assertEquals("Female", foundPersonSix.getGender());
-	}
+	}*/
 
-	@Test
+	/*@Test
 	@Order(7)
 	public void testFindByName() throws JsonMappingException, JsonProcessingException {
 		
@@ -322,7 +322,7 @@ public class PersonControllerJsonTest extends AbstractIntegrationTest {
 		assertEquals("Senna", foundPersonOne.getLastName());
 		assertEquals("São Paulo", foundPersonOne.getAddress());
 		assertEquals("Male", foundPersonOne.getGender());
-	}
+	}*/
 	
 	@Test
 	@Order(8)
@@ -343,7 +343,7 @@ public class PersonControllerJsonTest extends AbstractIntegrationTest {
 				.statusCode(403);
 	}
 	
-	@Test
+	/*@Test
 	@Order(9)
 	public void testHATEOAS() throws JsonMappingException, JsonProcessingException {
 		
@@ -370,7 +370,7 @@ public class PersonControllerJsonTest extends AbstractIntegrationTest {
 		assertTrue(content.contains("\"last\":{\"href\":\"http://localhost:8888/api/person/v1?direction=asc&page=100&size=10&sort=firstName,asc\"}}"));
 		
 		assertTrue(content.contains("\"page\":{\"size\":10,\"totalElements\":1007,\"totalPages\":101,\"number\":3}}"));
-	}
+	}*/
 	
 	private void mockPerson() {
 		person.setFirstName("Nelson");

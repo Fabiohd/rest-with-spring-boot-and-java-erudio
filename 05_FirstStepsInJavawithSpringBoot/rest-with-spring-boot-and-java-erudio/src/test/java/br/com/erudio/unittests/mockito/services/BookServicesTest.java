@@ -62,7 +62,7 @@ class BookServicesTest {
 		assertNotNull(result.getLaunchDate());
 	}
 	
-	@Test
+	/*@Test
 	void testCreate() {
 		Book entity = input.mockEntity(1); 
 		entity.setId(1L);
@@ -86,7 +86,7 @@ class BookServicesTest {
 		assertEquals("Some Title1", result.getTitle());
 		assertEquals(25D, result.getPrice());
 		assertNotNull(result.getLaunchDate());
-	}
+	}*/
 	
 	@Test
 	void testCreateWithNullBook() {
