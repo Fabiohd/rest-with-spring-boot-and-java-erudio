@@ -168,7 +168,7 @@ public class PersonControllerCorsJsonTest extends AbstractIntegrationTest {
 	
 
 	@Test
-	@Order(4)
+	@Order(3)
 	public void testFindByIdWithWrongOrigin() throws JsonMappingException, JsonProcessingException {
 		mockPerson();
 		
@@ -190,7 +190,7 @@ public class PersonControllerCorsJsonTest extends AbstractIntegrationTest {
 	}
 	
 	@Test
-	@Order(5)
+	@Order(4)
 	public void testDelete() throws JsonMappingException, JsonProcessingException {
 
 		given().spec(specification)
