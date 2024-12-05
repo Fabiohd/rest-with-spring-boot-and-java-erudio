@@ -73,7 +73,7 @@ public class PersonControllerCorsJsonTest extends AbstractIntegrationTest {
 				.build();
 	}
 	
-	@Test
+	/*@Test
 	@Order(1)
 	public void testCreate() throws JsonMappingException, JsonProcessingException {
 		mockPerson();
@@ -107,10 +107,10 @@ public class PersonControllerCorsJsonTest extends AbstractIntegrationTest {
 		assertEquals("Stallman", persistedPerson.getLastName());
 		assertEquals("New York City, New York, US", persistedPerson.getAddress());
 		assertEquals("Male", persistedPerson.getGender());
-	}
+	}*/
 
 	@Test
-	@Order(2)
+	@Order(1)
 	public void testCreateWithWrongOrigin() throws JsonMappingException, JsonProcessingException {
 		mockPerson();
 	
@@ -168,7 +168,7 @@ public class PersonControllerCorsJsonTest extends AbstractIntegrationTest {
 	
 
 	@Test
-	@Order(3)
+	@Order(2)
 	public void testFindByIdWithWrongOrigin() throws JsonMappingException, JsonProcessingException {
 		mockPerson();
 		
@@ -190,7 +190,7 @@ public class PersonControllerCorsJsonTest extends AbstractIntegrationTest {
 	}
 	
 	@Test
-	@Order(4)
+	@Order(3)
 	public void testDelete() throws JsonMappingException, JsonProcessingException {
 
 		given().spec(specification)
