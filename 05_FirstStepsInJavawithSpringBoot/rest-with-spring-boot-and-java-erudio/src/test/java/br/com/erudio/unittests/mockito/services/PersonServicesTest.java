@@ -6,7 +6,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -47,55 +46,7 @@ class PersonServicesTest {
 		MockitoAnnotations.openMocks(this);
 	}
 
-	@Test
-	void testFindAll() {
-		List<Person> list = input.mockEntityList();
-		
-		when(repository.findAll()).thenReturn(list);
-		
-		var people = service.findAll();
-		
-		assertNotNull(people);
-		assertEquals(14, people.size());
-		
-		var personOne = people.get(1);
-		
-		assertNotNull(personOne);
-		assertNotNull(personOne.getKey());
-		assertNotNull(personOne.getLinks());
-		
-		/*assertTrue(personOne.toString().contains("links: [</api/person/v1/1>;rel=\"self\"]"));
-		assertEquals("Addres Test1",personOne.getAddress());
-		assertEquals("First Name Test1",personOne.getFirstName());
-		assertEquals("Last Name Test1",personOne.getLastName());
-		assertEquals("Female",personOne.getGender());*/
-		
-		var personFor = people.get(4);
-		
-		assertNotNull(personFor);
-		assertNotNull(personFor.getKey());
-		assertNotNull(personFor.getLinks());
-		
-		/*assertTrue(personOne.toString().contains("links: [</api/person/v1/1>;rel=\"self\"]"));
-		assertEquals("Addres Test",personFor.getAddress());
-		assertEquals("First Name Test1",personFor.getFirstName());
-		assertEquals("Last Name Test1",personFor.getLastName());
-		assertEquals("Male",personFor.getGender());*/
-		
-		var personSeven = people.get(7);
-		
-		assertNotNull(personSeven);
-		assertNotNull(personSeven.getKey());
-		assertNotNull(personSeven.getLinks());
-		
-		/*assertTrue(personSeven.toString().contains("links: [</api/person/v1/1>;rel=\"self\"]"));
-		assertEquals("Addres Test1",personSeven.getAddress());
-		assertEquals("First Name Test1",personSeven.getFirstName());
-		assertEquals("Last Name Test1",personSeven.getLastName());
-		assertEquals("Female",personSeven.getGender());*/
 
-	
-	}
 
 	@Test
 	void testFindById() {

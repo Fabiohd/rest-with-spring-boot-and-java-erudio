@@ -1,6 +1,7 @@
-INSERT INTO `person` (`id`,`address`,`first_name`,`gender`,`last_name`) VALUES (1,'monte','fabio','male','henrique');
-INSERT INTO `person` (`id`,`address`,`first_name`,`gender`,`last_name`) VALUES (3,'monte2','fabio3','male2','henrique2');
-INSERT INTO `person` (`id`,`address`,`first_name`,`gender`,`last_name`) VALUES (5,'monte2','fabioadada','male2','henrique4');
-INSERT INTO `person` (`id`,`address`,`first_name`,`gender`,`last_name`) VALUES (6,'monte2','fabioadada','male2','henrique74');
-INSERT INTO `person` (`id`,`address`,`first_name`,`gender`,`last_name`) VALUES (7,'monte2','fabioadada','male2','henrique74');
-INSERT INTO `person` (`id`,`address`,`first_name`,`gender`,`last_name`) VALUES (8,'monte2','fabioadad','male2','henrique74');
+INSERT INTO `person` (`id`, `address`, `first_name`, `gender`, `last_name`) VALUES
+	(1, 'Uberlândia - Minas Gerais - Brasil', 'Leandro', 'Male', 'Costa'),
+	(2, 'Uberlândia - Minas Gerais - Brasil', 'Gabriela', 'Female', 'Costa'),
+	(5, 'Patos de Minas - Minas Gerais - Brasil', 'Flávio', 'Male', 'Costa'),
+	(7, 'Uberlândia - Minas Gerais - Brasil', 'Fernanda', 'Female', 'Cardoso da Silva'),
+	(8, 'Patos de Minas - Minas Gerais - Brasil', 'Pedro', 'Male', 'Paulo'),
+	(9, 'Patos de Minas - Minas Gerais - Brasil', 'Marcos', 'Male', 'Paulo');

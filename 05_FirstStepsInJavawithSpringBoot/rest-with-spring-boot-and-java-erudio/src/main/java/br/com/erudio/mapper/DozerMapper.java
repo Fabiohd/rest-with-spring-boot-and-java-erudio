@@ -1,3 +1,4 @@
+
 package br.com.erudio.mapper;
 
 import java.util.ArrayList;
@@ -21,6 +22,5 @@ public class DozerMapper {
 		}
 		return destinationObjects;
 	}
-
 
 }
