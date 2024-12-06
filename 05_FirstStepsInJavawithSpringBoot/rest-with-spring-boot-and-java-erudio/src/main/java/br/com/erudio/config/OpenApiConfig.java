@@ -15,7 +15,7 @@ public class OpenApiConfig {
 	OpenAPI customOpenAPI() {
 		return new OpenAPI()
 				.info(new Info()
-					.title("REST FULL API with Java 18 and Spring boot 3")
+					.title("RESTful API with Java 19 and Spring boot 3")
 					.version("v1")
 					.description("API CADASTRO")
 					.termsOfService("www.google.com")
