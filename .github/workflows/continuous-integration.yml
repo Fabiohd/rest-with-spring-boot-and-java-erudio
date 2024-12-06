@@ -45,11 +45,11 @@ jobs:
 
     - name: Tag, and push image to Amazon ECR
       run: |
-        docker tag ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-erudio:latest ${{ secrets.IMAGE_REPO_URL }}:${{ github.run_id }}
-        docker tag ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-erudio:latest ${{ secrets.IMAGE_REPO_URL }}:latest
+        docker tag ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-erudio ${{ secrets.IMAGE_REPO_URL }}:${{ github.run_id }}
+        docker tag ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-erudio ${{ secrets.IMAGE_REPO_URL }}
 
         docker push ${{ secrets.IMAGE_REPO_URL }}:${{ github.run_id }}
-        docker push ${{ secrets.IMAGE_REPO_URL }}:latest
+        docker push ${{ secrets.IMAGE_REPO_URL }}
 
     - name: Download task definition
       run: |
@@ -61,7 +61,7 @@ jobs:
       with:
         task-definition: task-definition.json
         container-name: ${{ secrets.CONTAINER_NAME }}
-        image: ${{ secrets.IMAGE_REPO_URL }}:latest
+        image: ${{ secrets.IMAGE_REPO_URL }}
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
@@ -76,4 +76,4 @@ jobs:
         docker tag ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-erudio ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-erudio:${{ github.run_id }}
 
         docker push ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-erudio:${{ github.run_id }}
-        docker push ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-erudio:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-erudio
